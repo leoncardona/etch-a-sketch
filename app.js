@@ -61,7 +61,7 @@ const generateGrid = () => {
   const createButton = document.getElementById('createButton');
   createButton.addEventListener('click', () => {
     const canvasSize = document.getElementById('canvasSize').value;
-    const validInput = canvasSize >= 1 && canvasSize <= 56;
+    const validInput = canvasSize >= 1 && canvasSize <= 48;
     if (validInput) {
       drawGrid(canvasSize);
       const clearButton = document.createElement('button');
@@ -72,7 +72,7 @@ const generateGrid = () => {
     }
     if (!validInput) {
       const errorMessage = document.createElement('p');
-      errorMessage.textContent = 'Valid size (1-56)';
+      errorMessage.textContent = 'Valid size (1-48)';
       content.append(errorMessage);
     }
   });
